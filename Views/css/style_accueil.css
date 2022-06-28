@@ -1,0 +1,28 @@
+﻿body 
+{
+    justify-content: space-between;
+    text-align: center;
+    font-family: Georgia, Verdana, 'Times New Roman', sans-serif;
+    background-color: #C3A351;
+    color: white;
+}
+
+h1
+{
+    color:blue;
+}
+
+aside
+{
+    flex: 1.2;
+}
+
+mark
+{
+    font-style: italic;
+}
+
+ul
+{
+    list-style-type: none;
+}
