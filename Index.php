@@ -1,4 +1,7 @@
 <?php
 session_start();
 
-include "../controllers/controller.php";
+require_once("Controllers/Router.php");
+
+$router = new Router();
+$router->routeRequest();
