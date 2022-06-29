@@ -9,6 +9,7 @@ class Router
     public function routeRequest()
     {
         try {
+            //TODO (latest) : create specific class for autoload (charge all classes at the same time)
             spl_autoload_register(function ($class) {
                 require_once('Models/' . $class . '.php');
             });
