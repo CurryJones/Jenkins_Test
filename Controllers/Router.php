@@ -31,8 +31,8 @@ class Router
                 }
             } else {
                 //Page chargée par défaut (si aucune action spécifiée dans l'url)
-                require_once("Controllers/ControllerWelcome.php");
-                $this->_controller = new ControllerAccueil($url); //$url contient tous les paramètres de l'url
+                require_once("Controllers/ControllerOrigin.php");
+                $this->_controller = new ControllerOrigin($url); //$url contient tous les paramètres de l'url
             }
         } catch (Exception $e) {
             $errorMessage = $e->getMessage();

@@ -8,7 +8,7 @@ abstract class Model //abstract = ne peut pas être instanciée, on l'utilise po
 
     private static function setDatabase()
     {
-        self::$_database = new PDO('mysql:host=localhost;dbname=Pahandre;charset=utf8;', 'username', 'pwd'); //TODO : vraies valeurs de BDD
+        self::$_database = new PDO('mysql:host=localhost;dbname=pahandre;charset=utf8;', 'World-Creator', 'AllMyL1fe'); //TODO : vraies valeurs de BDD
         self::$_database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 
@@ -23,7 +23,7 @@ abstract class Model //abstract = ne peut pas être instanciée, on l'utilise po
     protected function getAllElements($table, $object)
     {
         $elements = [];
-        $query = $this->getDatabase()->prepare("SELECT * FROM $table ORDER BY Id DESC");
+        $query = $this->getDatabase()->prepare('SELECT * FROM ' . $table . ' ORDER BY Id DESC');
         $query->execute();
         while ($data = $query->fetch(PDO::FETCH_ASSOC)) {
             $elements[] = new $object($data); //$object = objet qu'il faudra créer (en fonction de la table et tout) 
