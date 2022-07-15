@@ -1,4 +1,5 @@
 <?php
+$this->_pageTitle = 'Pays';
 foreach ($countries as $country) : ?>
     <h2><?= $country->getName() ?></h2>
     <ul>

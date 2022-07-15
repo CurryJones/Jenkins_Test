@@ -1,4 +1,5 @@
 <?php
+$this->_pageTitle = 'Personnages';
 foreach ($characters as $character) : ?>
     <h2><?= $character->getFirstname() ?></h2>
     <ul>

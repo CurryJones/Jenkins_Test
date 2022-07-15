@@ -1,4 +1,6 @@
 <?php
+require_once('views/View.php');
+
 class Router
 //Affiche les pages en fonction des paramètres url
 //Tout se passe sur la même page avec la structure MVC
@@ -31,13 +33,15 @@ class Router
                 }
             } else {
                 //Page chargée par défaut (si aucune action spécifiée dans l'url)
-                require_once("Controllers/ControllerOrigin.php");
-                $this->_controller = new ControllerOrigin($url); //$url contient tous les paramètres de l'url
+                require_once("Controllers/ControllerCharacter.php");
+                $this->_controller = new ControllerCharacter($url); //$url contient tous les paramètres de l'url
             }
         } catch (Exception $e) {
             $errorMessage = $e->getMessage();
-            //TODO : récupérer la vue avec l'attribut $_view
-            //require_once("Views/Errors.php");
+
+            //require_once("Views/viewError.php");
+            $this->_view = new View('Error');
+            $this->_view->generate(array('errormsg' => $errorMessage));
         }
     }
 }

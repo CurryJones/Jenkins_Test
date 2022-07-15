@@ -1,4 +1,6 @@
 <?php
+require_once('Views/View.php');
+
 class ControllerCharacter
 {
     private $_characterManager;
@@ -6,7 +8,7 @@ class ControllerCharacter
 
     public function __construct($url)
     {
-        if (isset($url) && count($url) > 1)
+        if (isset($url) && count(array($url)) > 1)
             throw new Exception("Nous avons cherché partout, mais cette page semble bien être introuvable");
         else
             $this->displayCharacters();
@@ -17,6 +19,8 @@ class ControllerCharacter
         $this->_characterManager = new CharacterManager;
         $characters = $this->_characterManager->getCharacters();
 
-        require_once('Views/viewCharacters.php'); //non sécurisé
+        //require_once('Views/viewCharacter.php'); //non sécurisé
+        $this->_view = new View('Character');
+        $this->_view->generate(array('characters' => $characters));
     }
 }
