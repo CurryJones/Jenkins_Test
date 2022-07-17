@@ -1,7 +1,7 @@
 <?php
 $this->_pageTitle = 'Pays';
 foreach ($countries as $country) : ?>
-    <h2><?= $country->getName() ?></h2>
+    <h2 class="subtitle"><?= $country->getName() ?></h2>
     <ul>
         <li><?= $country->getCapital() ?></li>
         <li><?= $country->getAge() ?></li>

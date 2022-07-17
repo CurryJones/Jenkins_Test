@@ -13,20 +13,21 @@
 
 <body id="main">
     <header id="topbar">
-        <nav id="user">
-            <ul>
-                <li><a href="index.php?=register">Sign Up</a></li>
-                <li><a href="index.php?=login">Login</a></li>
-                <li><a href="index.php?=admin">Admin</a></li>
-            </ul>
-        </nav>
-        <nav id="sections">
+        <nav>
             <ul>
 
                 <li><a href="index.php?=origin">Pahandre</a></li>
                 <li><a href="index.php?=character">Les Personnages</a></li>
                 <li><a href="index.php?=country">Les Pays</a></li>
                 <li><a href="index.php?=flow">Les Courants</a></li>
+            </ul>
+        </nav>
+        <h1 id="title">Bienvenue en Pahandre</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php?=register">Sign Up</a></li>
+                <li><a href="index.php?=login">Login</a></li>
+                <li><a href="index.php?=admin">Admin</a></li>
             </ul>
         </nav>
 

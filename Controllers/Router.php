@@ -33,8 +33,8 @@ class Router
                 }
             } else {
                 //Page chargée par défaut (si aucune action spécifiée dans l'url)
-                require_once("Controllers/ControllerCountry.php");
-                $this->_controller = new ControllerCountry($url); //$url contient tous les paramètres de l'url
+                require_once("Controllers/ControllerAdmin.php");
+                $this->_controller = new ControllerAdmin($url); //$url contient tous les paramètres de l'url
             }
         } catch (Exception $e) {
             $errorMessage = $e->getMessage();
