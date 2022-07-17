@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style_accueil.css" />
+    <link rel="stylesheet" href="Views/css/main.css" />
+    <link rel="stylesheet" href="Views/css/header.css" />
+    <link rel="stylesheet" href="Views/css/footer.css" />
     <title><?= $pageTitle ?></title>
 </head>
 
-<body>
-    <header>
-        <h1><a href="">Pahandre</a></h1>
-        <nav>
+<body id="main">
+    <header id="topbar">
+        <nav id="user">
             <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="">Géographie</a></li>
-                <li><a href="">Les Personnages</a></li>
-                <li><a href="">Les Courants</a></li>
+                <li><a href="index.php?=register">Sign Up</a></li>
+                <li><a href="index.php?=login">Login</a></li>
+                <li><a href="index.php?=admin">Admin</a></li>
+            </ul>
+        </nav>
+        <nav id="sections">
+            <ul>
+
+                <li><a href="index.php?=origin">Pahandre</a></li>
+                <li><a href="index.php?=character">Les Personnages</a></li>
+                <li><a href="index.php?=country">Les Pays</a></li>
+                <li><a href="index.php?=flow">Les Courants</a></li>
             </ul>
         </nav>
 
     </header>
     <?= $content ?>
-    <footer>
-        <div>
-            <h1>Derniers ajouts</h1>
-            <p>Les dernières idées qui m'ont traversé l'esprit.</p>
-        </div>
+    <footer id="footerbar">
         <p>Créé par Romain Pagneux</p>
+        <p>Cartes dessinées avec l'aide de <a href="https://inkarnate.com/">Inkarnate</a></p>
     </footer>
 </body>
 

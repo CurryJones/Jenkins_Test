@@ -27,19 +27,18 @@ class Router
 
                 if (file_exists($controllerFile)) {
                     require_once($controllerFile);
-                    $this->_controller = new $controllerClass($url); //this = private var $_controller
+                    $this->_controller = new $controllerClass($url);
                 } else {
                     throw new Exception('Nous avons cherché partout, mais cette page semble bien être introuvable');
                 }
             } else {
                 //Page chargée par défaut (si aucune action spécifiée dans l'url)
-                require_once("Controllers/ControllerCharacter.php");
-                $this->_controller = new ControllerCharacter($url); //$url contient tous les paramètres de l'url
+                require_once("Controllers/ControllerCountry.php");
+                $this->_controller = new ControllerCountry($url); //$url contient tous les paramètres de l'url
             }
         } catch (Exception $e) {
             $errorMessage = $e->getMessage();
 
-            //require_once("Views/viewError.php");
             $this->_view = new View('Error');
             $this->_view->generate(array('errormsg' => $errorMessage));
         }

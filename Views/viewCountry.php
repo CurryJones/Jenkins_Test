@@ -8,7 +8,7 @@ foreach ($countries as $country) : ?>
         <li><?= $country->getGovernment() ?></li>
         <li><?= $country->getEconomicPower() ?></li>
         <li><?= $country->getMilitaryPower() ?></li>
-        <li><?= $country->getMap() ?></li>
+        <img src="<?= $country->getMap() ?>" alt="carte du pays" style="height: 30%; width: 70%;">
     </ul>
 
 <?php endforeach; ?>
